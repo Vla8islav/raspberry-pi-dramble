@@ -1,10 +1,10 @@
 [dramble]
-kube1 ansible_host=10.0.100.61 kubernetes_role=master
-kube2 ansible_host=10.0.100.62 kubernetes_role=node
-kube3 ansible_host=10.0.100.63 kubernetes_role=node
-kube4 ansible_host=10.0.100.64 kubernetes_role=node
+kube1 ansible_host=192.168.88.12 kubernetes_role=master
+kube2 ansible_host=192.168.88.13 kubernetes_role=node
+kube3 ansible_host=192.168.88.14 kubernetes_role=node
+kube4 ansible_host=192.168.88.15 kubernetes_role=node
 
 [dramble:vars]
 ansible_ssh_user=pi
 deploy_target=pi
-kubernetes_apiserver_advertise_address=10.0.100.61
+kubernetes_apiserver_advertise_address=192.168.88.12
