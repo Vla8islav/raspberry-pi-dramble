@@ -8,3 +8,4 @@ kube4 ansible_host=192.168.88.15 kubernetes_role=node
 ansible_ssh_user=pi
 deploy_target=pi
 kubernetes_apiserver_advertise_address=192.168.88.12
+apt_proxy=192.168.88.21:3142

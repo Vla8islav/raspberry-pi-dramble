@@ -3,8 +3,13 @@
 - name: Disable swap.
   shell: >
     dphys-swapfile swapoff &&
-    dphys-swapfile uninstall &&
-    update-rc.d -f dphys-swapfile remove
+    dphys-swapfile uninstall 
   when:
     - ansible_swaptotal_mb > 0
     - deploy_target == 'pi'
+
+- name: Remove swap package
+  apt:
+    name:
+      - dphys-swapfile
+    state: absent
